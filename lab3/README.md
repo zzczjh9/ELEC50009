@@ -55,6 +55,15 @@ external connections.
 13. Choose `.sopcinfo` and choose *Hello World Small* as template
 14. Replace the existing code with the code form [`lab3/src/led_accelerometer_main.c`](./src/led_acceleromter_main.c).
 15. Build the project in Eclipse and program your device using the terminal commands. The LEDs should indicate the titling position of your board like a bubble floating in a spirit level.
+Enter nois2 shell
+```/home/z/intelFPGA_lite/18.1/nios2eds/nios2_command_shell.sh
+```
+Navigate
+```cd ~/ELEC50009/lab3/src/Golden_Top/software/lab3
+```
+Download the program to the Nios II processor
+```nios2-download -g lab3.elf
+```
 
 ## Task 2: Understanding of the code
 
