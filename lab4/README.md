@@ -57,7 +57,21 @@ line ‘\n’ character is encountered.
 2. Create a new software project using the `jtag-uart-test\qsys_system\cpu.sopcinfo`, hello_world BSP template, and the `task1.c` file provided in the `jtag-uart-test\software` directory. Compile the project to get the `.elf` file.
     * `jtag-uart-test\software` also contains a compiled `.elf` file.
 3. Following the note in lab2, use Powershell to download the `.elf` file to the DE10-Lite board using the following command.
-4. Try the command `nios2-terminal.exe <<< hello` in the terminal to see if the communication is working. You should see the following output.
+
+Enter nois2 shell
+```
+/home/z/intelFPGA_lite/18.1/nios2eds/nios2_command_shell.sh
+```
+Navigate
+```
+cd /home/z/ELEC50009/lab4/lab4_task1/jtag-uart-test/qsys_system/software/l4task1
+```
+Download the program to the Nios II processor
+```
+nios2-download -g l4task1.elf
+```
+
+5. Try the command `nios2-terminal.exe <<< hello` in the terminal to see if the communication is working. You should see the following output.
 
     ```powershell
     $ nios2-terminal.exe <<< hello
@@ -69,7 +83,7 @@ line ‘\n’ character is encountered.
     ```
 
     The first time may not be successful. If 0 characters are detected, you may try `nios2-terminal.exe <<< hello` again.
-5. In the same powershell, run `python host.py` to start the host program. The program is just a Python script to do the same thing as Step 4, but it also you to parameterize the input string and process the output from the board.
+6. In the same powershell, run `python host.py` to start the host program. The program is just a Python script to do the same thing as Step 4, but it also you to parameterize the input string and process the output from the board.
 
     ```powershell
     $ python host.py
