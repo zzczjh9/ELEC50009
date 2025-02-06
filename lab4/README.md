@@ -70,7 +70,10 @@ Download the program to the Nios II processor
 ```
 nios2-download -g l4task1.elf
 ```
-
+See terminal
+```
+nios2-terminal
+```
 5. Try the command `nios2-terminal.exe <<< hello` in the terminal to see if the communication is working. You should see the following output.
 
     ```powershell
